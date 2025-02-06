@@ -131,7 +131,22 @@ Solvency - Can a compnay pay those longterm liablities = Total Liablities / Tota
    Liabilities = Notes Payable + Accounts Payable + Unearned Service Revenue
    Retained Earnings = Revenues - Expenses - Dividends
 
-2.
+2. Accounts
+   Transactions are recorded in accounts
+   Debit vs Credit (Payer vs Reciever) T-Accounts
+   Double Entry System
+
+   - Debits = Credit (Credit balance vs Debit Balance)
+     Asset Accounts = Debit Balance
+     Liablity Accounts = Credit Balance
+
+- Investments increases SE as CREDITS
+  RE increases SE as CREDITS
+  Dividend Incurred decreases SE as DEBITS
+  Revenue increase SE as CREDIT
+  Expenses decreases SE as DEBITS
+
+3. Posting
 
 ### Accounting Information System timeline
 
