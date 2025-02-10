@@ -12,4 +12,11 @@ Feb 6 - Created the Onboarding Form, Leadership Form, Journey Tracker Form, and 
 Feb 7 - Unofficial Meeting going over Onboarding Form and Expectations
 Feb 7 - Finalized Meeting Notes for Feb 7th on Discord
 Feb 7 - Booked Meeting Room for Feb 12th at Lib 3524
+Feb 7 - Emailed Mark - Student Lead Energy and Power Startup
 Feb 8 - Send out Onboarding Email
+Feb 9 - Updated Onboarding Form to include bylaws and student conduct confirmation
+Feb 10 - Created Email Signiture (Missing Link to Website)
+Feb 10 - Created Automated Meeting Scheduler
+Feb 10 - Emailed Stephanie and Zion
+Feb 10 - Emailed Professor KP
+Feb 10 - Started CAF Form
