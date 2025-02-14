@@ -10,19 +10,20 @@ public class TimedPingClient {
         }
         String host = args[0];
         DatagramSocket socket = null;
-        int port = 53;
+        int port = 7;
+        int packetSize = 1024;
         try {
             InetAddress address = InetAddress.getByName(host);
-            socket = new DatagramSocket(52);
+            socket = new DatagramSocket(32);
             socket.setSoTimeout(5000); // Timeout after 5s
-            socket.setReceiveBufferSize(512); // RX Buffer Size 512
+            socket.setReceiveBufferSize(packetSize); // RX Buffer Size 1024
             byte[] message = "ping".getBytes();
             InetSocketAddress dest = new InetSocketAddress(address, port);
             DatagramPacket outgoingDatagram = new DatagramPacket(message, message.length, dest);
 
             long startTime = System.currentTimeMillis();
             socket.send(outgoingDatagram);
-            socket.receive(new DatagramPacket(new byte[512], 512));
+            socket.receive(new DatagramPacket(new byte[packetSize], packetSize));
             long endTime = System.currentTimeMillis();
 
             long rtt = endTime - startTime; // Calculate RTT in ms
