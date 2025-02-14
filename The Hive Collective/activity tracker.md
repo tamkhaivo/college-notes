@@ -20,3 +20,13 @@ Feb 10 - Created Automated Meeting Scheduler
 Feb 10 - Emailed Stephanie and Zion
 Feb 10 - Emailed Professor KP
 Feb 10 - Started CAF Form
+Fed 10 - Scheduled Meeting with Cameron Law
+Feb 11 - Signed CAF Form
+Feb 12 - Rescheduled Meeting with Cameron Law
+Feb 12 - THC Meeting
+Feb 12 - Meeting with Dr Posnett and Tosh to talk about IP and Updating Bylaws
+Feb 13 - Visited the Carleson Center
+Feb 13 - Dropped-in to Arlene J. Miranda to talk about the THC IP Attribution
+Feb 13 - Called a meeting with Rafael IP Specialist to talk about the struggles with THC IP
+Feb 13 - ASI CAF Account Update and Schedule a workshop March 7th
+
