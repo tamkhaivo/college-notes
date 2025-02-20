@@ -29,4 +29,14 @@ Feb 13 - Visited the Carleson Center
 Feb 13 - Dropped-in to Arlene J. Miranda to talk about the THC IP Attribution
 Feb 13 - Called a meeting with Rafael IP Specialist to talk about the struggles with THC IP
 Feb 13 - ASI CAF Account Update and Schedule a workshop March 7th
-
+Feb 14 - Hosted THC Meeting
+Feb 14 - Reached out to Engineering Clubs
+Feb 15 - Studied Contributors Licences Agreements
+Feb 17 - Met with Dr Posnett about CLAs (Continued Studies for CLAs)
+Feb 19 - Hosted THC Meeting
+Feb 19 - Reached out to Engineering Clubs
+Feb 19 - Reached out to the ECS Internship and Career Development Department and MESA
+Feb 19 - Reached out to professor Abdel for Clubs on Campus
+Feb 19 - Compiled CLAs Researched
+Feb 19 - GPL Incompatible with closed-source - MIT & APatche Licences - Distributes codes but acknowldges the projects
+Feb 19 - 
