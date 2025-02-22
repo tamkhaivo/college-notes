@@ -39,4 +39,7 @@ Feb 19 - Reached out to the ECS Internship and Career Development Department and
 Feb 19 - Reached out to professor Abdel for Clubs on Campus
 Feb 19 - Compiled CLAs Researched
 Feb 19 - GPL Incompatible with closed-source - MIT & APatche Licences - Distributes codes but acknowldges the projects
-Feb 19 - 
+Feb 19 - Met with Rafael and Cameron Law about IP and meeting with people for IP domain
+Feb 21 - Hosted General Meeting - Reached out to Fashion Club and GRIDS to partner with club activities
+Feb 21 - Assigned NextJS Homework
+Feb 21 - Recheduled Cameron Law with Arlene

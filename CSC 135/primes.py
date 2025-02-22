@@ -28,7 +28,6 @@ class primes:
         return primeIter(self.prime)
 
 
-
-
+print(primes(190))
 
 
