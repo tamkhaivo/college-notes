@@ -113,7 +113,7 @@ class HamtIter:
         if(len(queue) == 0):
             raise StopIteration
         self.item = self.queue.pop(0)
-        self.queue += self.queue + self.item.children
+        self.queue = self.queue + self.item.children
         return item
             
 # The following is a trick to make this testing code be ignored

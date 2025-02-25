@@ -43,3 +43,6 @@ Feb 19 - Met with Rafael and Cameron Law about IP and meeting with people for IP
 Feb 21 - Hosted General Meeting - Reached out to Fashion Club and GRIDS to partner with club activities
 Feb 21 - Assigned NextJS Homework
 Feb 21 - Recheduled Cameron Law with Arlene
+Feb 24 - Looked up Conference Sponsorship Opportunities with the School
+Feb 24 - Met with Dr Posnett on potential clubs and school sponsorshipi and Non For Profit
+Feb 24 - Scheduled a meeting with SFA Leaders - Wednesday 3-4
