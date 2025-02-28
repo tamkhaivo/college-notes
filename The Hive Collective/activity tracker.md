@@ -46,3 +46,6 @@ Feb 21 - Recheduled Cameron Law with Arlene
 Feb 24 - Looked up Conference Sponsorship Opportunities with the School
 Feb 24 - Met with Dr Posnett on potential clubs and school sponsorshipi and Non For Profit
 Feb 24 - Scheduled a meeting with SFA Leaders - Wednesday 3-4
+Feb 24 - Solidified Non-Functional Requirements with Database, NoSQL
+Feb 27 - Met with Dr. President Wood about Club Funding
+Feb 
