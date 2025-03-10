@@ -48,4 +48,12 @@ Feb 24 - Met with Dr Posnett on potential clubs and school sponsorshipi and Non 
 Feb 24 - Scheduled a meeting with SFA Leaders - Wednesday 3-4
 Feb 24 - Solidified Non-Functional Requirements with Database, NoSQL
 Feb 27 - Met with Dr. President Wood about Club Funding
-Feb 
+Mar 4 - Cannot be funded through club funds \_ Cannot Paid for Activities
+Mar 4 - Update club Bylaws
+Mar 4 - Have all officers go through officer agreement form
+Mar 4 - Updated Club Officers
+Mar 5 - Club Meeting with
+Mar 5 - Met with ASI Accounting to see how Cash Rewards Work
+Mar 5 - Met with Booking for SFAxTHC hoodie event
+Mar 7 - Impromptu Meeting for Resume and Interview Techniques
+Mar 8 - Set up flyers with SFA for Hoodie Design Competition
