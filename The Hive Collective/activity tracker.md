@@ -57,3 +57,5 @@ Mar 5 - Met with ASI Accounting to see how Cash Rewards Work
 Mar 5 - Met with Booking for SFAxTHC hoodie event
 Mar 7 - Impromptu Meeting for Resume and Interview Techniques
 Mar 8 - Set up flyers with SFA for Hoodie Design Competition
+Mar 10 - Emailed News Letter
+Mar 11 -
