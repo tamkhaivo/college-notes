@@ -58,4 +58,8 @@ Mar 5 - Met with Booking for SFAxTHC hoodie event
 Mar 7 - Impromptu Meeting for Resume and Interview Techniques
 Mar 8 - Set up flyers with SFA for Hoodie Design Competition
 Mar 10 - Emailed News Letter
-Mar 11 -
+Mar 12 - Met with GRIDs to go over flyer competiton
+Mar 12 - Emailed SFA to reschedule
+Mar 12 - Scheduled a meeting with Dr Posnett on Friday 21st for him to discuss open source licences
+Mar 12 - Fast Deployment of THC Website assignment
+Mar 14 - Speech done at Sac State for "How I got into Google and Amazon"
