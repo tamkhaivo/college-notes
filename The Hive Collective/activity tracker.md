@@ -63,3 +63,5 @@ Mar 12 - Emailed SFA to reschedule
 Mar 12 - Scheduled a meeting with Dr Posnett on Friday 21st for him to discuss open source licences
 Mar 12 - Fast Deployment of THC Website assignment
 Mar 14 - Speech done at Sac State for "How I got into Google and Amazon"
+Mar 16 - Rescheduled SFA Event
+Mar 21 - GRIDs meeting
