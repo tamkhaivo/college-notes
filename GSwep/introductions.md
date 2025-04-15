@@ -45,3 +45,46 @@ I am somewhat of a performance junkie and for physical activities I like boulder
 6.  **Weekly Action Plan (15 minutes)**
     - Collaboratively create a weekly action plan.
     - Focus on enhancing foundational coding and problem-solving skills.
+
+## Design Interviews
+
+1. Analyze Problem
+2. Discuss Solutions
+3. Weigh Pros and Cons
+4. Communicate
+
+### Framework
+
+1. Define the problem space (Shrink with system constraints)
+2. Functional and non-functional requirements
+3. Scratch vs Existing Peieces
+4. Business Objectives and User Experience
+5. Estimate Data
+   -- Storage size and bandwith requirements
+   -- Assumptions w/ user volume
+
+6. High Level Design
+
+- APIs, rest, soap, rpc, graphql w/ WHY
+- request parameters and response type
+
+3. Deep Dive into Design
+
+- Nonfuncting requirements impact design choices
+- FRESH Data - speed up data and data ingestion queries
+  -- Large Data - Data Partitioning to balance traffic
+  -- Load balanceing layer -
+
+4. Identify Bottlenecks and Scaling
+
+- Single Point of Failure
+- Replication of Data - Horizontal Sharding
+- Global Service - CDN
+- Edge Cases - Peaktime Usage
+- 10x more users?
+
+5. Review and wrapup!
+
+- List major considerations
+- satisfies all requirements
+- directions for further improvements
