@@ -65,3 +65,12 @@ Mar 12 - Fast Deployment of THC Website assignment
 Mar 14 - Speech done at Sac State for "How I got into Google and Amazon"
 Mar 16 - Rescheduled SFA Event
 Mar 21 - GRIDs meeting
+Mar 26 - Club Meeting w/ Web Creation
+Apr 1 - Club Meeting during Spring Break
+Apr 4 - Club Meeting for MVP
+Apr 9 - Sick
+Apr 11 - Sick
+Apr 15 - Submitted Addmitted Student Day Application for The Hive Collective
+Apr 13 - Booked Room for Next Fall Semsester
+Apr 16 - MVP and Video Creation
+Apr 16 -
