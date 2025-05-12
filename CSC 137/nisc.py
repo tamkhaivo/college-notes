@@ -42,7 +42,7 @@ def encode(instr, labels, pc):
         op = OPCODES[mnemonic]
         return (op << 9) | (rm << 6) | (rn << 3) | rd
 
-    elif mnemonic in {"NOT", "LSL", "LSR", "ASR"}:
+    elif mnemonic in {"NOT", "LSL", "LSR", "ASL"}:
         rd, rn = REGS[parts[1]], REGS[parts[2]]
         op, subop = OPCODES[mnemonic]
         return (op << 9) | (subop << 6) | (rn << 3) | rd
@@ -63,7 +63,7 @@ def encode(instr, labels, pc):
 
     elif mnemonic == "MOVC":
         rd = REGS[parts[1]]
-        imm = int(parts[2])
+        imm = int(parts[2],0)
         if not -32 <= imm < 32:
             raise ValueError("Immediate out of range (-32 to 31)")
         if imm < 0:
