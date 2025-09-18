@@ -1,0 +1,18 @@
+
+(base) tvo@tvos-MacBook-Pro-3 CSC 139 % dtruss ./reverse hello
+
+read(0, "hello\n", 1024)                  = 6
+
+brk(0x55c0a1a3b000)                       = 0x55c0a1a3b000
+
+read(0, "world\n", 1024)                  = 6
+
+brk(0x55c0a1a3c000)                       = 0x55c0a1a3c000
+
+read(0, "", 1024)                         = 0
+
+write(1, "world\n", 6)                    = 6
+
+write(1, "hello\n", 6)                    = 6
+
+exit_group(0)                             = ?
