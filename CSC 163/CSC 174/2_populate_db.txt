@@ -1,0 +1,29 @@
+INSERT INTO Instructor (InstructorID, InstructorName, Office) VALUES
+('I_100', 'Dr. Poppings', 'A-101'),
+('I_200', 'Dr. School', 'B-202'),
+('I_300', 'Dr. Buse', 'C-303');
+INSERT INTO Student (SSN, StudentName, Address, Email) VALUES
+('S_001', 'Jinx', '123 Main St', 'jinx@csus.edu'),
+('S_002', 'Sode', '456 Oak Ave', 'sode@csus.edu'),
+('S_003', 'Steve', '789 Pine Ln', 'steve@csus.edu'),
+('S_004', 'Pine', '101 Maple Dr', 'pine@csus.edu');
+INSERT INTO TA (SSN, Salary) VALUES
+('S_001', 5000),
+('S_002', 5000);
+INSERT INTO Course (CourseNo, CourseName, InstructorID, TASSN) VALUES
+('CSC101', 'Intro to CS', 'I_100', 'S_001'),      
+('CSC202', 'Data Structures', 'I_100', 'S_002'), 
+('MTH150', 'Calculus I', 'I_200', 'S_001'),       
+('PHY303', 'Physics', 'I_200', NULL);          
+INSERT INTO InPersonCourse (CourseNo, ClassTime, RoomNo, Building) VALUES
+('CSC101', 'MWF 10:00AM', 'R120', 'Science Hall'),
+('MTH150', 'TTH 09:00AM', 'G300', 'Math Building'),
+('PHY303', 'MW 01:00PM', 'L200', 'Physics Wing');
+INSERT INTO OnlineCourse (CourseNo, URL) VALUES
+('CSC202', 'http://csus.edu/courses/csc202');
+INSERT INTO Enrolled (StudentSSN, CourseNo, Grade) VALUES
+('S_003', 'CSC101', 'A'),
+('S_004', 'CSC101', 'B'),
+('S_003', 'CSC202', 'A'),
+('S_003', 'MTH150', 'A'),
+('S_001', 'MTH150', 'A');
