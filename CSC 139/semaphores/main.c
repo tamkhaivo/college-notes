@@ -43,8 +43,6 @@ int request_counter = 0;
  */
 pthread_mutex_t mutex;
 pthread_mutex_t request_mutex;
-pthread_mutex_t print_mutex;
-pthread_mutex_t print_producer_mutex;
 pthread_cond_t cond_producer;
 pthread_cond_t cond_consumer;
 sem_t *empty_slots;
@@ -64,6 +62,7 @@ typedef enum {
  */
 typedef struct {
     SyncType sync_type;
+    int thread_num;
 } ThreadParams;
 
 // Function signatures
@@ -85,8 +84,6 @@ int consume_semaphore();
  */
 void init_sync(SyncType sync_type) {
     pthread_mutex_init(&request_mutex, NULL);
-    pthread_mutex_init(&print_mutex, NULL);
-    pthread_mutex_init(&print_producer_mutex, NULL);
     switch (sync_type) {
         case MUTEX:
             pthread_mutex_init(&mutex, NULL);
@@ -111,8 +108,6 @@ void init_sync(SyncType sync_type) {
  */
 void destroy_sync(SyncType sync_type) {
     pthread_mutex_destroy(&request_mutex);
-    pthread_mutex_destroy(&print_mutex);
-    pthread_mutex_destroy(&print_producer_mutex);
     switch (sync_type) {
         case MUTEX:
             pthread_mutex_destroy(&mutex);
@@ -162,14 +157,19 @@ int main(int argc, char *argv[]) {
 
     pthread_t producer_threads[NUM_PRODUCERS];
     pthread_t consumer_threads[NUM_CONSUMERS];
-    ThreadParams params = {sync_type};
-
+    ThreadParams producer_params[NUM_PRODUCERS];
+    ThreadParams consumer_params[NUM_CONSUMERS];
+    
     for (int i = 0; i < NUM_PRODUCERS; i++) {
-        pthread_create(&producer_threads[i], NULL, producer, &params);
+        producer_params[i].sync_type = sync_type;
+        producer_params[i].thread_num = i;
+        pthread_create(&producer_threads[i], NULL, producer, &producer_params[i]);
     }
 
     for (int i = 0; i < NUM_CONSUMERS; i++) {
-        pthread_create(&consumer_threads[i], NULL, consumer, &params);
+        consumer_params[i].sync_type = sync_type;
+        consumer_params[i].thread_num = i;
+        pthread_create(&consumer_threads[i], NULL, consumer, &consumer_params[i]);
     }
 
     for (int i = 0; i < NUM_PRODUCERS; i++) {
@@ -210,7 +210,7 @@ void *producer(void *param) {
                 break;
         }
         // Desynced output
-        printf("Produced: %d\n", current_request);
+        printf("Producer %d: Produced Request - %d\n", params->thread_num, current_request);
     }
     pthread_exit(NULL);
 }
@@ -237,7 +237,7 @@ void *consumer(void *param) {
                 break;
         }
         // Desynced output
-        printf("Consumed: %d\n", request);
+        printf("Consumer %d: Consumed Request - %d\n", params->thread_num, request);
     }
     pthread_exit(NULL);
 }
@@ -267,6 +267,7 @@ int consume_mutex() {
     pthread_mutex_lock(&mutex);
     while (in == out) { // Buffer is empty, busy wait
         pthread_mutex_unlock(&mutex);
+        sleep(1);
         pthread_mutex_lock(&mutex);
     }
     request = buffer[out];
