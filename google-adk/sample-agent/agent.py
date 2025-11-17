@@ -1,5 +1,5 @@
 from google.adk.agents import Agent, SequentialAgent, ParallelAgent, LoopAgent
-from google.adk.models.google_llm import Gemini
+from google.adk.models.lite_llm import LiteLlm
 from google.adk.runners import InMemoryRunner
 from google.adk.tools import AgentTool, FunctionTool, google_search
 from google.genai import types
@@ -19,48 +19,33 @@ retry_config=types.HttpRetryOptions(
 
 tech_researcher = Agent(
     name="TechResearcher",
-    model=Gemini(
-        model="gemini-2.5-flash-lite", # Using a recommended model
-        retry_options=retry_config
-    ),
+    model=LiteLlm(model="ollama/qwen:0.5b"),
     instruction="""Research the latest AI/ML trends. Include 3 key developments,
 the main companies involved, and the potential impact. Keep the report very concise (100 words).""",
-    tools=[google_search],
     output_key="tech_research",  # The result will be stored with this key.
 )
 
 health_researcher = Agent(
     name="HealthResearcher",
-    model=Gemini(
-        model="gemini-2.5-flash-lite",
-        retry_options=retry_config
-    ),
+    model=LiteLlm(model="ollama/qwen:0.5b"),
     instruction="""Research recent medical breakthroughs. Include 3 significant advances,
 their practical applications, and estimated timelines. Keep the report concise (100 words).""",
-    tools=[google_search],
     output_key="health_research",  # The result will be stored with this key.
 )
 
 finance_researcher = Agent(
     name="FinanceResearcher",
-    model=Gemini(
-        model="gemini-2.5-flash-lite",
-        retry_options=retry_config
-    ),
+    model=LiteLlm(model="ollama/qwen:0.5b"),
     instruction="""Research current fintech trends. Include 3 key trends,
 their market implications, and the future outlook. Keep the report concise (100 words).""",
-    tools=[google_search],
-    output_key="finance_research",  # The result will be stored with this key.
+    output_key="finance_research",
 )
 
 # Refinement Agents + Workflow
 
 tech_critic_agent = Agent(
     name="TechCritic",
-    model=Gemini(
-        model="gemini-2.5-flash-lite",
-        retry_options=retry_config
-    ),
+    model=LiteLlm(model="ollama/qwen:0.5b"),
     instruction="""You are a senior tech analyst. Review the research report below.
     
     Report: {tech_research}
@@ -73,10 +58,7 @@ tech_critic_agent = Agent(
 
 tech_refiner_agent = Agent(
     name="TechRefiner",
-    model=Gemini(
-        model="gemini-2.5-flash-lite",
-        retry_options=retry_config
-    ),
+    model=LiteLlm(model="ollama/qwen:0.5b"),
     instruction="""You are a tech report refiner.
     
     Original Report: {tech_research}
@@ -106,7 +88,7 @@ tech_workflow = SequentialAgent(
 # HEALTH AGENT 
 health_critic_agent = Agent(
     name="HealthCritic",
-    model=Gemini(model="gemini-2.5-flash-lite", retry_options=retry_config),
+    model=LiteLlm(model="ollama/qwen:0.5b"),
     instruction="""You are a senior medical editor. Review the research report below.
     
     Report: {health_research}
@@ -119,7 +101,7 @@ health_critic_agent = Agent(
 
 health_refiner_agent = Agent(
     name="HealthRefiner",
-    model=Gemini(model="gemini-2.5-flash-lite", retry_options=retry_config),
+    model=LiteLlm(model="ollama/qwen:0.5b"),
     instruction="""You are a health report refiner.
     
     Original Report: {health_research}
@@ -146,7 +128,7 @@ health_workflow = SequentialAgent(
 
 finance_critic_agent = Agent(
     name="FinanceCritic",
-    model=Gemini(model="gemini-2.5-flash-lite", retry_options=retry_config),
+    model=LiteLlm(model="ollama/qwen:0.5b"),
     instruction="""You are a senior financial analyst. Review the research report below.
     
     Report: {finance_research}
@@ -159,7 +141,7 @@ finance_critic_agent = Agent(
 
 finance_refiner_agent = Agent(
     name="FinanceRefiner",
-    model=Gemini(model="gemini-2.5-flash-lite", retry_options=retry_config),
+    model=LiteLlm(model="ollama/qwen:0.5b"),
     instruction="""You are a finance report refiner.
     
     Original Report: {finance_research}
@@ -195,10 +177,7 @@ parallel_research_team = ParallelAgent(
 
 aggregator_agent = Agent(
     name="AggregatorAgent",
-    model=Gemini(
-        model="gemini-2.5-flash-lite",
-        retry_options=retry_config
-    ),
+    model=LiteLlm(model="ollama/qwen:0.5b"),
     instruction="""Combine these three approved research findings into a single executive summary:
 
     **Technology Trends:**
