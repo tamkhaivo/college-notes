@@ -1,0 +1,111 @@
+{
+  "eval_set_id": "calculus_reseach_test",
+  "name": "calculus_reseach_test",
+  "eval_cases": [
+    {
+      "eval_id": "what are the fundamental thereoms of calculus?",
+      "conversation": [
+        {
+          "invocation_id": "e-64a19fd9-e912-4eb0-b5d3-7258c9ac69b9",
+          "user_content": {
+            "parts": [
+              {
+                "text": "what are the fundamental thereoms of calculus?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "The fundamental theorems of calculus are:\n\n1.  **The First Fundamental Theorem of Calculus:** This states that if $f$ is continuous on $[a, b]$, then the function $F(x) = \\\\int_{a}^{x} f(t) \\, dt$ is an antiderivative of $f$. In simpler terms, the derivative of an integral with a variable upper limit gives you back the original function.\n\n2.  **The Second Fundamental Theorem of Calculus:** This provides a way to calculate definite integrals. If $F$ is any antiderivative of a continuous function $f$ on $[a, b]$, then $\\\\int_{a}^{b} f(x) \\, dx = F(b) - F(a)$. This means you can find the definite integral by evaluating the antiderivative at the limits of integration and subtracting.\n\nThere is 1 paper on the fundamental theorems of calculus."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "research_paper_finder_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-bce6e9ba-748f-4256-b76b-a470dd39cd33",
+                        "args": {
+                          "request": "fundamental theorems of calculus"
+                        },
+                        "name": "google_search_agent"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "research_paper_finder_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-bce6e9ba-748f-4256-b76b-a470dd39cd33",
+                        "name": "google_search_agent",
+                        "response": {
+                          "result": "The Fundamental Theorem of Calculus is a cornerstone of calculus that establishes a profound connection between differentiation and integration, demonstrating they are inverse operations. It is typically presented in two parts.\n\n**The First Fundamental Theorem of Calculus** states that if a function $f$ is continuous on a closed interval $[a, b]$, then the function $F(x)$ defined as the integral of $f$ from $a$ to $x$ is an antiderivative of $f$. Mathematically, this is expressed as:\n$$ \\frac{d}{dx} \\int_{a}^{x} f(t) \\, dt = f(x) $$\nThis part of the theorem essentially says that the derivative of an integral (with a variable upper limit) returns the original function. It guarantees that continuous functions have antiderivatives.\n\n**The Second Fundamental Theorem of Calculus** provides a method for evaluating definite integrals. It states that if $f$ is a continuous function on $[a, b]$ and $F$ is any antiderivative of $f$ (meaning $F'(x) = f(x)$), then the definite integral of $f$ from $a$ to $b$ can be calculated as the difference between the values of the antiderivative at the upper and lower limits of integration:\n$$ \\int_{a}^{b} f(x) \\, dx = F(b) - F(a) $$\nThis theorem is incredibly useful for computing definite integrals without resorting to the more cumbersome methods like Riemann sums. It highlights that the choice of the constant of integration for the antiderivative does not affect the result of the definite integral, as it cancels out during the subtraction."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "research_paper_finder_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-f90b09ef-27c2-4a79-9c30-9abf2ace78b8",
+                        "args": {
+                          "papers": [
+                            "The First Fundamental Theorem of Calculus states that if a function $f$ is continuous on a closed interval $[a, b]$, then the function $F(x)$ defined as the integral of $f$ from $a$ to $x$ is an antiderivative of $f$. Mathematically, this is expressed as:\n$$ \\frac{d}{dx} \\int_{a}^{x} f(t) \\, dt = f(x) $$\nThis part of the theorem essentially says that the derivative of an integral (with a variable upper limit) returns the original function. It guarantees that continuous functions have antiderivatives.\n\nThe Second Fundamental Theorem of Calculus provides a method for evaluating definite integrals. It states that if $f$ is a continuous function on $[a, b]$ and $F$ is any antiderivative of $f$ (meaning $F'(x) = f(x)$), then the definite integral of $f$ from $a$ to $b$ can be calculated as the difference between the values of the antiderivative at the upper and lower limits of integration:\n$$ \\int_{a}^{b} f(x) \\, dx = F(b) - F(a) $$\nThis theorem is incredibly useful for computing definite integrals without resorting to the more cumbersome methods like Riemann sums. It highlights that the choice of the constant of integration for the antiderivative does not affect the result of the definite integral, as it cancels out during the subtraction."
+                          ]
+                        },
+                        "name": "count_papers"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "research_paper_finder_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-f90b09ef-27c2-4a79-9c30-9abf2ace78b8",
+                        "name": "count_papers",
+                        "response": {
+                          "result": 1
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1763155659.989211
+        }
+      ],
+      "session_input": {
+        "app_name": "research-agent",
+        "user_id": "user"
+      },
+      "creation_timestamp": 1763155745.927594
+    }
+  ],
+  "creation_timestamp": 1763155732.354283
+}

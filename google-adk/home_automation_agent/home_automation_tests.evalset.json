@@ -430,6 +430,77 @@
         "user_id": "user"
       },
       "creation_timestamp": 1763147843.3021739
+    },
+    {
+      "eval_id": "bedroom_light_status",
+      "conversation": [
+        {
+          "invocation_id": "e-fe5b28e3-f9d8-46cc-b219-961da814e9e5",
+          "user_content": {
+            "parts": [
+              {
+                "text": "Turn on the lights in the bedroom"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "The lights in the bedroom are now on."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "home_automation_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-d09e0300-8c84-4ac2-ae17-311e848b4151",
+                        "args": {
+                          "status": "ON",
+                          "device_id": "lights",
+                          "location": "bedroom"
+                        },
+                        "name": "set_device_status"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "home_automation_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-d09e0300-8c84-4ac2-ae17-311e848b4151",
+                        "name": "set_device_status",
+                        "response": {
+                          "success": true,
+                          "message": "Successfully set the lights in bedroom to on."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1763151944.636728
+        }
+      ],
+      "session_input": {
+        "app_name": "home_automation_agent",
+        "user_id": "user"
+      },
+      "creation_timestamp": 1763152016.942562
     }
   ],
   "creation_timestamp": 1763147394.993133

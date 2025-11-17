@@ -46,7 +46,7 @@ root_agent = LlmAgent(
     You MUST ALWAYS follow these steps:
     1) Find research papers on the user provided topic using the 'google_search_agent'. 
     2) Then, pass the papers to 'count_papers' tool to count the number of papers returned.
-    3) Return both the list of research papers and the total number of papers.
+    3) Return both the list of research papers and thier summaries and the total number of papers.
     """,
     tools=[AgentTool(agent=google_search_agent), count_papers]
 )
