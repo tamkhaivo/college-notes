@@ -1,2 +1,3 @@
 .env
-/google-adk/home_automation_agent/.adk
+/google-adk/*/.adk/
+/google-adk/*/__pycache__
