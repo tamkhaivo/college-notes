@@ -1,0 +1,24 @@
+DELIMITER $
+
+CREATE FUNCTION Course_Instructor(
+    in_course_name VARCHAR(100)
+)
+RETURNS VARCHAR(100)
+BEGIN
+    DECLARE inst_name VARCHAR(100);
+
+    SELECT I.InstructorName INTO inst_name
+    FROM Instructor I
+    JOIN Course C ON I.InstructorID = C.InstructorID
+    WHERE C.CourseName = in_course_name
+    LIMIT 1; 
+
+    RETURN inst_name;
+END$
+
+DELIMITER ;
+
+SELECT Course_Instructor('Intro to CS'), 'Dr. Poppings' AS 'Expected Instructor';
+SELECT Course_Instructor('Data Structures'), 'Dr. Poppings' AS 'Expected Instructor';
+SELECT Course_Instructor('Calculus I'), 'Dr. School' AS 'Expected Instructor';
+SELECT Course_Instructor('Physics'), 'Dr. Buse' AS 'Expected Instructor';
